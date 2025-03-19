@@ -12,10 +12,13 @@ print(df.head())
 y_columns = [col for col in df.columns if col != 'session' and col != 'pitch_speed_mph']
 
 
+
 # Initialize the Dash app
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
 
 # Layout 
+
+server = app.server
 
 app.layout = html.Div([
     # Dropdown for selecting the y-axis column
